@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 
 const Home = () => {
   const [{ loading, error, data }, refetch] = useAxios({
-    url: "http://ookat.kg/api/product",
+    url: "http://45.145.65.201:4200/api/product",
   });
 
   return (
