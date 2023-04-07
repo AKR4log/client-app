@@ -1,19 +1,23 @@
-"use client";
+// "use client";
+// import useAxios from "axios-hooks";
 
-import useAxios from "axios-hooks";
-import styles from "./page.module.css";
+import ListProduct from "@/components/List/Product/ListProduct";
 
 const Home = () => {
-  const [{ loading, error, data }, refetch] = useAxios({
-    url: "http://45.145.65.201:4200/api/product",
-  });
+  // const [{ loading, error, data }, refetch] = useAxios({
+  //   url: "http://45.145.65.201:4200/api/product",
+  // });
+  {
+    /* <h1>Users Page</h1>
+  <button onClick={() => refetch}>Refetch</button>
+  {loading && <p>Loading...</p>}
+  {!!error && <p>{error.message}</p>}
+  {!!data && <pre>{JSON.stringify(data, null, 4)}</pre>} */
+  }
 
   return (
-    <main className={styles.main}>
-      <h1>Users Page</h1>
-      {loading && <p>Loading...</p>}
-      {!!error && <p>{error.message}</p>}
-      {!!data && <pre>{JSON.stringify(data, null, 4)}</pre>}
+    <main>
+      <ListProduct />
     </main>
   );
 };
