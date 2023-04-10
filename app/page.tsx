@@ -5,7 +5,9 @@ export default async function Home() {
 	const { data } = await ProductService.getProducts();
 	return (
 		<main>
-			<HomePage products={data} />
+			<div className='py-10'>
+				<HomePage products={data} />
+			</div>
 		</main>
 	);
 }

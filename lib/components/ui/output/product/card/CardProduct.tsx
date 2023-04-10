@@ -4,8 +4,8 @@ import { useActions } from '@/lib/hooks/useActions';
 import { useTypedSelector } from '@/lib/hooks/useTypedSelector';
 import { IProduct } from '@/lib/types/product.interface';
 import {
-	ChevronLeftIcon,
-	ChevronRightIcon,
+	MinusIcon,
+	PlusIcon,
 	ShoppingBagIcon,
 	TrashIcon
 } from '@heroicons/react/24/outline';
@@ -24,9 +24,9 @@ const CardProduct = ({
 	const itemExists = items.find(item => item.product.id === id);
 	const product = { id, price, images, user, description, name };
 	return (
-		<div  className='group relative shadow rounded-md p-2'>
+		<div className='group relative shadow rounded-xl p-2'>
 			<Link href={`product/${product.id}`}>
-				<div className='min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
+				<div className='min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
 					<img
 						src={images[0]}
 						alt={images[0]}
@@ -34,9 +34,15 @@ const CardProduct = ({
 					/>
 				</div>
 
-				<div className='mt-2'>
-					<div className='text-sm font-medium text-gray-700'>{product.name}</div>
-					<div className='text-sm font-normal text-gray-600 text-ellipsis overflow-hidden max-h-16'>{product.description}</div>
+				<div className='my-2 text-sm text-green-600 font-semibold'>Apple</div>
+
+				<div>
+					<div className='text-sm font-medium text-gray-700'>
+						{product.name}
+					</div>
+					<div className='text-sm font-normal text-gray-600 text-ellipsis overflow-hidden max-h-16'>
+						{product.description}
+					</div>
 				</div>
 			</Link>
 			<div className='pt-1.5 flex items-center justify-between'>
@@ -46,26 +52,26 @@ const CardProduct = ({
 						<>
 							{itemExists.quantity === 1 ? (
 								<button
-									className='bg-red-300 hover:bg-red-400 text-red-800 hover:text-white py-2 px-2 rounded-full '
+									className='bg-red-100 hover:bg-red-400 text-red-600 hover:text-white py-2 px-2 rounded-full '
 									onClick={() => removeFromCart({ id: product.id })}
 								>
 									<TrashIcon className='h-4 w-4' aria-hidden='true' />
 								</button>
 							) : (
 								<button
-									className='bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white py-2 px-2 rounded-full'
+									className='bg-gray-100 hover:bg-gray-400 text-gray-800 hover:text-white py-2 px-2 rounded-full'
 									onClick={() =>
 										changeQuantity({ id: product.id, type: 'minus' })
 									}
 								>
-									<ChevronLeftIcon className='h-4 w-4' aria-hidden='true' />
+									<MinusIcon className='h-4 w-4' aria-hidden='true' />
 								</button>
 							)}
 							<button
-								className='bg-gray-300 hover:bg-gray-400 text-gray-800 hover:text-white py-2 px-2 rounded-full ml-1'
+								className='bg-gray-100 hover:bg-gray-400 text-gray-800 hover:text-white py-2 px-2 rounded-full ml-1'
 								onClick={() => changeQuantity({ id: product.id, type: 'plus' })}
 							>
-								<ChevronRightIcon className='h-4 w-4' aria-hidden='true' />
+								<PlusIcon className='h-4 w-4' aria-hidden='true' />
 							</button>
 							<p className='text-base font-medium pl-2'>
 								{itemExists.quantity}
