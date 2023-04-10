@@ -24,7 +24,7 @@ const CardProduct = ({
 	const itemExists = items.find(item => item.product.id === id);
 	const product = { id, price, images, user, description, name };
 	return (
-		<div key={id} className='group relative shadow rounded-md p-2'>
+		<div  className='group relative shadow rounded-md p-2'>
 			<Link href={`product/${product.id}`}>
 				<div className='min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
 					<img

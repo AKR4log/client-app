@@ -10,7 +10,17 @@ const OutputProduct = ({ products }: { products: IProduct[] }) => {
 				Топ товары Электроники
 			</h2>
 			<div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-3'>
-				{products?.map((product: IProduct) => CardProduct(product))}
+				{products?.map((product: IProduct) => (
+					<CardProduct
+						key={product.id}
+						id={product.id}
+						price={product.price}
+						user={product.user}
+						name={product.name}
+						images={product.images}
+						description={product.description}
+					/>
+				))}
 			</div>
 		</>
 	);
