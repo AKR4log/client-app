@@ -1,4 +1,3 @@
-'use client';
 
 import { useTypedSelector } from '@/lib/hooks/useTypedSelector';
 import { ICartItem } from '@/lib/types/cart.interface';
