@@ -1,10 +1,7 @@
-
-import { useTypedSelector } from '@/lib/hooks/useTypedSelector';
 import { ICartItem } from '@/lib/types/cart.interface';
 import CardProduct from '../product/card/CardProduct';
 
-const OutputCart = () => {
-	const items = useTypedSelector(state => state.cart.items);
+const OutputCart = ({items}: any) => {
 	return (
 		<div className='bg-white mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-3'>
 			{items.map((product: ICartItem) => (
