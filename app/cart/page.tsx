@@ -1,6 +1,6 @@
-import CartPage from "@/pages/cart/Cart";
+import CartPage from '@/pages/cart/Cart';
 
-export default async function Cart() {
+export default function Cart() {
 	return (
 		<main>
 			<CartPage />

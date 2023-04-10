@@ -1,5 +1,5 @@
+import { Wrapper } from '@/app/wrapper';
 import '@/lib/assets/styles/global.scss';
-import { Wrapper } from '@/lib/components/layout/wrapper/wrapper';
 import Header from '@/lib/components/ui/header/Header';
 
 export const metadata = {
