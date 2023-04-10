@@ -1,5 +1,3 @@
-'use client'
-
 import OutputCart from '@/lib/components/ui/output/cart/OutputCart';
 
 const CartPage = () => {
