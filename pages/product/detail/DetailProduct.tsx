@@ -11,8 +11,8 @@ const DetailProduct = ({ name, description, images, price }: IProduct) => {
 	};
 	return (
 		<div className='flex relative'>
-			<div className='shrink-0'>
-				<div className='h-28 w-28 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
+			<div className='shrink-0 w-1/2'>
+				<div className='h-52 w-52 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
 					<img
 						src={images?.[currentIndex]}
 						alt={images?.[currentIndex]}
