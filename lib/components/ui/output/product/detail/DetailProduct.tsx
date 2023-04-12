@@ -16,11 +16,11 @@ const ImagesDetailProduct = ({ images }: { images: string[] }) => {
 					className='h-full w-full object-cover object-center'
 				/>
 			</div>
-			{images.length === 1 ? (
+			{images?.length === 1 ? (
 				<div></div>
 			) : (
 				<div className='grid grid-cols-4 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-3 py-3'>
-					{images.map((slide, slideIndex) => (
+					{images?.map((slide, slideIndex) => (
 						<div
 							key={slideIndex}
 							onClick={() => goToSlide(slideIndex)}

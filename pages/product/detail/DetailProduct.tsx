@@ -2,14 +2,7 @@ import ImagesDetailProduct from '@/lib/components/ui/output/product/detail/Detai
 import { IProduct } from '@/lib/types/product.interface';
 import { formatToCurrency } from '@/lib/utils/format-to-currency';
 
-const DetailProduct = ({
-	id,
-	name,
-	description,
-	images,
-	user,
-	price
-}: IProduct) => {
+const DetailProduct = ({ name, description, images, price }: IProduct) => {
 	return (
 		<div className='flex relative'>
 			<ImagesDetailProduct images={images} />
@@ -23,7 +16,6 @@ const DetailProduct = ({
 				<p className='mt-2 ml-4 text-slate-500'>{description}</p>
 			</div>
 		</div>
-		// </div>
 	);
 };
 
