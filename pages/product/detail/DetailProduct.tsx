@@ -1,6 +1,5 @@
 'use client';
 
-import AddCartAndPay from '@/lib/components/ui/actions/add-cart';
 import { IProduct } from '@/lib/types/product.interface';
 import { formatToCurrency } from '@/lib/utils/format-to-currency';
 import { useState } from 'react';
@@ -55,14 +54,14 @@ const DetailProduct = ({
 					{formatToCurrency(price)}
 				</p>
 				<p className='mt-2 text-slate-700'>{description}</p>
-				<AddCartAndPay
+				{/* <AddCartAndPay
 					id={id}
 					name={name}
 					description={description}
 					images={images}
 					price={price}
 					user={user}
-				/>
+				/> */}
 			</div>
 		</div>
 	);
