@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 const ImagesDetailProduct = ({ images }: { images: string[] }) => {
-	const [currentIndex, setCurrentIndex] = useState(0) || [];
+	const [currentIndex, setCurrentIndex] = useState(0) || [0];
 	const goToSlide = (slideIndex: number) => {
 		setCurrentIndex(slideIndex);
 	};
@@ -16,11 +16,11 @@ const ImagesDetailProduct = ({ images }: { images: string[] }) => {
 					className='h-full w-full object-cover object-center'
 				/>
 			</div>
-			{images.length === 1 ? (
+			{images?.length === 1 ? (
 				<div></div>
 			) : (
 				<div className='grid grid-cols-4 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-3 py-3'>
-					{images.map((slide, slideIndex) => (
+					{images?.map((slide, slideIndex) => (
 						<div
 							key={slideIndex}
 							onClick={() => goToSlide(slideIndex)}

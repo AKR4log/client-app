@@ -1,10 +1,11 @@
+import ImagesDetailProduct from '@/lib/components/ui/output/product/detail/DetailProduct';
 import { IProduct } from '@/lib/types/product.interface';
 import { formatToCurrency } from '@/lib/utils/format-to-currency';
 
 const DetailProduct = ({ name, description, images, price }: IProduct) => {
 	return (
 		<div className='flex relative'>
-			{/* <ImagesDetailProduct images={images} /> */}
+			<ImagesDetailProduct images={images} />
 			<div className='w-full'>
 				<div className='uppercase ml-4 tracking-wide text-xl text-indigo-500 font-semibold'>
 					{name}
