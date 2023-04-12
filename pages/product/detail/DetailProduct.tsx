@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
 import { IProduct } from '@/lib/types/product.interface';
 import { formatToCurrency } from '@/lib/utils/format-to-currency';
 import { useState } from 'react';
 
 const DetailProduct = ({ name, description, images, price }: IProduct) => {
-	const [currentIndex, setCurrentIndex] = useState(0);
+	const [currentIndex, setCurrentIndex] = useState(0) || [0];
 	const goToSlide = (slideIndex: number) => {
 		setCurrentIndex(slideIndex);
 	};
@@ -14,8 +14,8 @@ const DetailProduct = ({ name, description, images, price }: IProduct) => {
 			<div className='shrink-0'>
 				<div className='h-28 w-28 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
 					<img
-						src={images[currentIndex]}
-						alt={images[currentIndex]}
+						src={images?.[currentIndex]}
+						alt={images?.[currentIndex]}
 						className='h-full w-full object-cover object-center'
 					/>
 				</div>
