@@ -6,14 +6,16 @@ const Product = async ({ params }: { params: { id: string } }) => {
 	const { data } = await ProductService.byId(id);
 	return (
 		<main>
-			<DetailProduct
-				id={data.id}
-				name={data.name}
-				description={data.description}
-				images={data.images}
-				user={data.user}
-				price={data.price}
-			/>
+			<div className='max-w-5xl mx-auto bg-white pt-6'>
+				<DetailProduct
+					id={data.id}
+					name={data.name}
+					description={data.description}
+					images={data.images}
+					user={data.user}
+					price={data.price}
+				/>
+			</div>
 		</main>
 	);
 };

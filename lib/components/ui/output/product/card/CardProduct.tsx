@@ -3,6 +3,7 @@
 import { useActions } from '@/lib/hooks/useActions';
 import { useTypedSelector } from '@/lib/hooks/useTypedSelector';
 import { IProduct } from '@/lib/types/product.interface';
+import { formatToCurrency } from '@/lib/utils/format-to-currency';
 import {
 	MinusIcon,
 	PlusIcon,
@@ -46,7 +47,7 @@ const CardProduct = ({
 				</div>
 			</Link>
 			<div className='pt-1.5 flex items-center justify-between'>
-				<p className='text-base font-medium text-gray-900'>{price} рублей</p>
+				<p className='text-base font-medium text-gray-900'>{formatToCurrency(price)}</p>
 				<div className='flex items-center justify-center px-2'>
 					{itemExists ? (
 						<>
